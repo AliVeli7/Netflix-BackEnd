@@ -1,0 +1,59 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    Ic<Movie> movies = Model;
+    int count = 1;
+}
+
+<div class="container">
+    <div class="row">
+        <h4 class="card-title">Movies</h4>
+        <a class="btn btn-success" asp-action="Create" style="width:150px; height:35px">Create Movie</a>
+        <div class="col-12">
+            <table class="table table-image">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Poster</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Imdb</th>
+                        <th scope="col">Created Date</th>
+                        <th scope="col">Release Date</th>
+                        <th scope="col">Language</th>
+                        <th scope="col">Run Time</th>
+                        <th scope="col">Vote Average</th>
+                        <th scope="col">Vote Count</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var product in movies)
+                    {
+                    <tr>
+                        <th scope="row">@count</th>
+                        <td class="w-25">
+                            <img src="@product.PosterUrl" class="img-fluid img-thumbnail" alt="@product.Name" style="width:400px; height:200px">
+                        </td>
+                        <td>@product.Name</td>
+                        <td>@product.ImdbId</td>
+                        <td>@product.CreatedAt</td>
+                        <td>@product.ReleaseDate</td>
+                        <td>@product.Language</td>
+                        <td>@product.RunTime</td>
+                        <td>@product.VoteAverage</td>
+                        <td>@product.VoteCount</td>
+                        <td>
+                            <a class="btn btn-sm btn-danger" asp-action="Delete" asp-route-id="@product.Id"><i class="mdi mdi-delete-variant"></i></a>
+                            <a class="btn btn-sm btn-danger" asp-action="Update" asp-route-id="@product.Id"><i class="mdi mdi-lead-pencil"></i></a>
+                        </td>
+                    </tr>
+                        count++;
+
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+

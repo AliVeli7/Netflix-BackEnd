@@ -1,0 +1,49 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    List<Episode> episodes = Model;
+    int count = 1;
+}
+
+<div class="container">
+    <div class="row">
+        <h4 class="card-title">Movies</h4>
+        <a class="btn btn-success" asp-action="Create" style="width:150px; height:35px">Create Genre</a>
+        <div class="col-12">
+            <table class="table table-image">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Imdb Id</th>
+                        <th scope="col">Original Language</th>
+                        <th scope="col">Title</th>
+                        <th scope="col">ReleaseDate</th>
+                        <th scope="col">Budget</th>
+                        <th scope="col">SeasonNumber</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var series in episodes)
+                    {
+                        <tr>
+                            <th scope="row">@count</th>
+                            <td>@series.Name</td>
+                            <td>@series.Title</td>
+                            <td>
+                                <a class="btn btn-sm btn-danger" asp-action="Delete" asp-route-id="@series.Id"><i class="mdi mdi-delete-variant"></i></a>
+                                <a class="btn btn-sm btn-danger" asp-action="Update" asp-route-id="@series.Id"><i class="mdi mdi-lead-pencil"></i></a>
+                            </td>
+                        </tr>
+                        count++;
+
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+

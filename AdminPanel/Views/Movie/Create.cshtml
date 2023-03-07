@@ -1,0 +1,71 @@
+﻿@model Movie
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row">
+    <div class="col-md-6 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Create New Movie</h4>
+                <form class="forms-sample" method="post" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label asp-for="Poster">Select Photo</label>
+                        <input asp-for="Poster" class="form-control">
+                        <span class="text-danger" asp-validation-for="Poster"></span>
+                        <label asp-for="BackDrop">Select Photo</label>
+                        <input asp-for="BackDrop" class="form-control">
+                        <span class="text-danger" asp-validation-for="BackDrop"></span>
+                        <label asp-for="Name">Name</label>
+                        <input asp-for="Name" class="form-control">
+                        <span class="text-danger" asp-validation-for="Name"></span>
+                        <label asp-for="Title">Title</label>
+                        <input asp-for="Title" class="form-control">
+                        <span class="text-danger" asp-validation-for="Title"></span>
+                        <label asp-for="ImdbId">IMDB</label>
+                        <input asp-for="ImdbId" class="form-control">
+                        <span class="text-danger" asp-validation-for="ImdbId"></span>
+                        <label asp-for="MovieGenres">Select Genre</label>
+                        <select asp-for="MovieGenres" name="genres[]" multiple>
+                            @foreach (Genre item in ViewBag.genres)
+                            {
+                                <option value="@item.Id">@item.Name</option>
+                            }
+                        </select>
+                        <label asp-for="MovieActors">Select Actor</label>
+                        <select asp-for="MovieActors" name="actors[]" multiple>
+                            @foreach (Actor item in ViewBag.actors)
+                            {
+                                <option value="@item.Id">@item.Name</option>
+                            }
+                        </select>
+                        <label asp-for="MovieProCompanies">Select Production Company</label>
+                        <select asp-for="MovieProCompanies" name="companies[]" multiple>
+                            @foreach (ProductionCompany item in ViewBag.companies)
+                            {
+                                <option value="@item.Id">@item.Name</option>
+                            }
+                        </select>
+                        <label asp-for="MovieProCountries">Select Production Countries</label>
+                        <select asp-for="MovieProCountries" name="countries[]" multiple>
+                            @foreach (ProductionCountry item in ViewBag.countries)
+                            {
+                                <option value="@item.Id">@item.Name</option>
+                            }
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary mr-2">Create</button>
+                    <a class="btn btn-light" asp-action="Index">Cancel</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section script{
+   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.4/jquery.validate.min.js" integrity="sha512-FOhq9HThdn7ltbK8abmGn60A/EMtEzIzv1rvuh+DqzJtSGq8BRdEN0U+j0iKEIffiw/yEtVuladk6rsG4X6Uqg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.12/jquery.validate.unobtrusive.min.js" integrity="sha512-o6XqxgrUsKmchwy9G5VRNWSSxTS4Urr4loO6/0hYdpWmFUfHqGzawGxeQGMDqYzxjY9sbktPbNlkIQJWagVZQg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+}

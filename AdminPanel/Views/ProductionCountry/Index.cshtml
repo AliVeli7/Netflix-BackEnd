@@ -1,0 +1,40 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    List<ProductionCountry> productionCountries = Model;
+    int count = 1;
+}
+
+
+<div class="container">
+    <div class="row">
+        <h4 class="card-title">Production Countries</h4>
+        <a class="btn btn-success" asp-action="Create" style="width:150px; height:35px">Create Production Country</a>
+        <div class="col-12">
+            <table class="table table-image">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Name</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var country in productionCountries)
+                    {
+                        <tr>
+                            <th scope="row">@count</th>
+                            <td>@country.Name</td>
+                            <td>
+                                <a class="btn btn-sm btn-danger" asp-action="Delete" asp-route-id="@country.Id"><i class="mdi mdi-delete-variant"></i></a>
+                                <a class="btn btn-sm btn-danger" asp-action="Update" asp-route-id="@country.Id"><i class="mdi mdi-lead-pencil"></i></a>
+                            </td>
+                        </tr>
+                        count++;
+
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

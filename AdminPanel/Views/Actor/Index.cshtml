@@ -1,0 +1,54 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    List<Actor> actors = Model;
+    int count = 1;
+}
+
+<div class="container">
+    <div class="row">
+        <h4 class="card-title">Actors</h4>
+        <a class="btn btn-success" asp-action="Create" style="width:150px; height:35px">Add Actor</a>
+        <div class="col-12">
+            <table class="table table-image">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Photo</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">SurName</th>
+                        <th scope="col">BirthDay</th>
+                        <th scope="col">Popularity</th>
+                        <th scope="col">Gender</th>
+                        <th scope="col">PlaceofBirth</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var actor in actors)
+                    {
+                    <tr>
+                        <th scope="row">@count</th>
+                        <td><img src="`" /></td>
+                        <td>@actor.Name</td>
+                        <td>@actor.SurName</td>
+                        <td>@actor.BirthDay</td>
+                        <td>@actor.Popularity</td>
+                        <td>@actor.Gender</td>
+                        <td>@actor.PlaceofBirth</td>
+                        <td>
+                            <a class="btn btn-sm btn-danger" asp-action="Delete" asp-route-id="@actor.Id"><i class="mdi mdi-delete-variant"></i></a>
+                            <a class="btn btn-sm btn-danger" asp-action="Update" asp-route-id="@actor.Id"><i class="mdi mdi-lead-pencil"></i></a>
+                        </td>
+                    </tr>
+                        count++;
+
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+

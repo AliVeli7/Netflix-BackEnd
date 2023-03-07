@@ -1,0 +1,146 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Concrete\Migrations\20220729093225_CreatLanguageTable.cs" />
+    <Compile Remove="Concrete\Migrations\20220729093225_CreatLanguageTable.Designer.cs" />
+    <Compile Remove="Migrations\20220728195516_CreateUserTable.cs" />
+    <Compile Remove="Migrations\20220728195516_CreateUserTable.Designer.cs" />
+    <Compile Remove="Migrations\20220728202344_CreateMovieTable.cs" />
+    <Compile Remove="Migrations\20220728202344_CreateMovieTable.Designer.cs" />
+    <Compile Remove="Migrations\20220728202454_CreateGenreTable.cs" />
+    <Compile Remove="Migrations\20220728202454_CreateGenreTable.Designer.cs" />
+    <Compile Remove="Migrations\20220728202854_CreateMovieGenreTable.cs" />
+    <Compile Remove="Migrations\20220728202854_CreateMovieGenreTable.Designer.cs" />
+    <Compile Remove="Migrations\20220728202944_CreateMovieActorTable.cs" />
+    <Compile Remove="Migrations\20220728202944_CreateMovieActorTable.Designer.cs" />
+    <Compile Remove="Migrations\20220728203009_CreateActorTable.cs" />
+    <Compile Remove="Migrations\20220728203009_CreateActorTable.Designer.cs" />
+    <Compile Remove="Migrations\20220728203322_CreateMovieGenreTable.cs" />
+    <Compile Remove="Migrations\20220728203322_CreateMovieGenreTable.Designer.cs" />
+    <Compile Remove="Migrations\20220728203345_CreateGenreTable.cs" />
+    <Compile Remove="Migrations\20220728203345_CreateGenreTable.Designer.cs" />
+    <Compile Remove="Migrations\20220728203533_CreateMovieGenreTable.cs" />
+    <Compile Remove="Migrations\20220728203533_CreateMovieGenreTable.Designer.cs" />
+    <Compile Remove="Migrations\20220728203555_CreateGenreTable.cs" />
+    <Compile Remove="Migrations\20220728203555_CreateGenreTable.Designer.cs" />
+    <Compile Remove="Migrations\20220728203656_CreateMovieActorTable.cs" />
+    <Compile Remove="Migrations\20220728203656_CreateMovieActorTable.Designer.cs" />
+    <Compile Remove="Migrations\20220728203842_CreateActorTable.cs" />
+    <Compile Remove="Migrations\20220728203842_CreateActorTable.Designer.cs" />
+    <Compile Remove="Migrations\20220728210043_CreateLanguageTable.cs" />
+    <Compile Remove="Migrations\20220728210043_CreateLanguageTable.Designer.cs" />
+    <Compile Remove="Migrations\20220728210129_CreateMovieProCompanyTable.cs" />
+    <Compile Remove="Migrations\20220728210129_CreateMovieProCompanyTable.Designer.cs" />
+    <Compile Remove="Migrations\20220728210221_CreateProductionCompanyTable.cs" />
+    <Compile Remove="Migrations\20220728210221_CreateProductionCompanyTable.Designer.cs" />
+    <Compile Remove="Migrations\20220728210334_CreateMovieProCountriesTable.cs" />
+    <Compile Remove="Migrations\20220728210334_CreateMovieProCountriesTable.Designer.cs" />
+    <Compile Remove="Migrations\20220728210427_CreateProductionCountriesTable.cs" />
+    <Compile Remove="Migrations\20220728210427_CreateProductionCountriesTable.Designer.cs" />
+    <Compile Remove="Migrations\20220728222704_CreateTable.cs" />
+    <Compile Remove="Migrations\20220728222704_CreateTable.Designer.cs" />
+    <Compile Remove="Migrations\20220728223720_CreateMovieActorTable.cs" />
+    <Compile Remove="Migrations\20220728223720_CreateMovieActorTable.Designer.cs" />
+    <Compile Remove="Migrations\20220728223755_CreateActorTable.cs" />
+    <Compile Remove="Migrations\20220728223755_CreateActorTable.Designer.cs" />
+    <Compile Remove="Migrations\20220729004106_CreatMovieTable.cs" />
+    <Compile Remove="Migrations\20220729004106_CreatMovieTable.Designer.cs" />
+    <Compile Remove="Migrations\20220729004608_CreatMovieActor.cs" />
+    <Compile Remove="Migrations\20220729004608_CreatMovieActor.Designer.cs" />
+    <Compile Remove="Migrations\20220729004817_CreatMovieActor.cs" />
+    <Compile Remove="Migrations\20220729004817_CreatMovieActor.Designer.cs" />
+    <Compile Remove="Migrations\20220729005427_CreatMovieActor.cs" />
+    <Compile Remove="Migrations\20220729005427_CreatMovieActor.Designer.cs" />
+    <Compile Remove="Migrations\20220729011418_CreatMovieActor.cs" />
+    <Compile Remove="Migrations\20220729011418_CreatMovieActor.Designer.cs" />
+    <Compile Remove="Migrations\20220729091353_CreateLanuageTable.cs" />
+    <Compile Remove="Migrations\20220729091353_CreateLanuageTable.Designer.cs" />
+    <Compile Remove="Migrations\20220729095542_CreatUserTable.cs" />
+    <Compile Remove="Migrations\20220729095542_CreatUserTable.Designer.cs" />
+    <Compile Remove="Migrations\20220729095620_CreatProjectTable.cs" />
+    <Compile Remove="Migrations\20220729095620_CreatProjectTable.Designer.cs" />
+    <Compile Remove="Migrations\20220729095920_CreatProjectTable.cs" />
+    <Compile Remove="Migrations\20220729095920_CreatProjectTable.Designer.cs" />
+    <Compile Remove="Migrations\20220729100402_CreatProjectTable.cs" />
+    <Compile Remove="Migrations\20220729100402_CreatProjectTable.Designer.cs" />
+    <Compile Remove="Migrations\20220729102854_CreatProjectTable.cs" />
+    <Compile Remove="Migrations\20220729102854_CreatProjectTable.Designer.cs" />
+    <Compile Remove="Migrations\20220729103228_CreatProjectTable.cs" />
+    <Compile Remove="Migrations\20220729103228_CreatProjectTable.Designer.cs" />
+    <Compile Remove="Migrations\20220729103358_CreatProjectTable.cs" />
+    <Compile Remove="Migrations\20220729103358_CreatProjectTable.Designer.cs" />
+    <Compile Remove="Migrations\20220729103704_CreatProjectTable.cs" />
+    <Compile Remove="Migrations\20220729103704_CreatProjectTable.Designer.cs" />
+    <Compile Remove="Migrations\20220729103827_CreatProjectTable.cs" />
+    <Compile Remove="Migrations\20220729103827_CreatProjectTable.Designer.cs" />
+    <Compile Remove="Migrations\20220729104152_CreatProjectTable.cs" />
+    <Compile Remove="Migrations\20220729104152_CreatProjectTable.Designer.cs" />
+    <Compile Remove="Migrations\20220729104344_CreatProjectTable.cs" />
+    <Compile Remove="Migrations\20220729104344_CreatProjectTable.Designer.cs" />
+    <Compile Remove="Migrations\20220729104441_CreatProjectTable.cs" />
+    <Compile Remove="Migrations\20220729104441_CreatProjectTable.Designer.cs" />
+    <Compile Remove="Migrations\20220729104735_CreatProjectTable.cs" />
+    <Compile Remove="Migrations\20220729104735_CreatProjectTable.Designer.cs" />
+    <Compile Remove="Migrations\20220729104904_CreatProjectTable.cs" />
+    <Compile Remove="Migrations\20220729104904_CreatProjectTable.Designer.cs" />
+    <Compile Remove="Migrations\20220729105114_CreatProjectTable.cs" />
+    <Compile Remove="Migrations\20220729105114_CreatProjectTable.Designer.cs" />
+    <Compile Remove="Migrations\20220729110034_CreatProjectTable.cs" />
+    <Compile Remove="Migrations\20220729110034_CreatProjectTable.Designer.cs" />
+    <Compile Remove="Migrations\20220729113718_CreatProjectTable.cs" />
+    <Compile Remove="Migrations\20220729113718_CreatProjectTable.Designer.cs" />
+    <Compile Remove="Migrations\20220729150722_CreatMovieTable.cs" />
+    <Compile Remove="Migrations\20220729150722_CreatMovieTable.Designer.cs" />
+    <Compile Remove="Migrations\20220729151127_CreatTvProductionCountryTable.cs" />
+    <Compile Remove="Migrations\20220729151127_CreatTvProductionCountryTable.Designer.cs" />
+    <Compile Remove="Migrations\20220729151250_CreatTvSeriesTable.cs" />
+    <Compile Remove="Migrations\20220729151250_CreatTvSeriesTable.Designer.cs" />
+    <Compile Remove="Migrations\20220729151519_CreateTvSeriesTable.cs" />
+    <Compile Remove="Migrations\20220729151519_CreateTvSeriesTable.Designer.cs" />
+    <Compile Remove="Migrations\20220729151616_CreateTvSeriesTable.cs" />
+    <Compile Remove="Migrations\20220729151616_CreateTvSeriesTable.Designer.cs" />
+    <Compile Remove="Migrations\20220729152221_CreateTvSeriesTable.cs" />
+    <Compile Remove="Migrations\20220729152221_CreateTvSeriesTable.Designer.cs" />
+    <Compile Remove="Migrations\20220729152323_CreateTvSeriesTable.cs" />
+    <Compile Remove="Migrations\20220729152323_CreateTvSeriesTable.Designer.cs" />
+    <Compile Remove="Migrations\20220729152353_CreateTvSeriesTable.cs" />
+    <Compile Remove="Migrations\20220729152353_CreateTvSeriesTable.Designer.cs" />
+    <Compile Remove="Migrations\20220811012310_CreatTvSeriesTable.cs" />
+    <Compile Remove="Migrations\20220811012310_CreatTvSeriesTable.Designer.cs" />
+    <Compile Remove="Migrations\20220811012427_CreatTvSeriesTable.cs" />
+    <Compile Remove="Migrations\20220811012427_CreatTvSeriesTable.Designer.cs" />
+    <Compile Remove="Migrations\20220811012520_CreatTvSeriesTable.cs" />
+    <Compile Remove="Migrations\20220811012520_CreatTvSeriesTable.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="11.0.1" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="11.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Cors" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="3.1.24" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.24" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.1.24">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.24" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.24">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Core\Core.csproj" />
+    <ProjectReference Include="..\Entities\Entities.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Concrete\Migrations\" />
+  </ItemGroup>
+
+</Project>
